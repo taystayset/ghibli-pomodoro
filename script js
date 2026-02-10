@@ -1,0 +1,52 @@
+let timer;
+let isRunning = false;
+let isStudy = true;
+let timeLeft = 25 * 60;
+
+const timerDisplay = document.getElementById("timer");
+const modeDisplay = document.getElementById("mode");
+
+function updateDisplay() {
+  const m = Math.floor(timeLeft / 60);
+  const s = timeLeft % 60;
+  timerDisplay.textContent = `${m}:${s < 10 ? "0" : ""}${s}`;
+}
+
+function startTimer() {
+  if (isRunning) return;
+  isRunning = true;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    updateDisplay();
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      isRunning = false;
+      isStudy = !isStudy;
+
+      const study = document.getElementById("studyInput").value;
+      const brk = document.getElementById("breakInput").value;
+
+      timeLeft = (isStudy ? study : brk) * 60;
+      modeDisplay.textContent = isStudy ? "Study time ✨" : "Break time ☕";
+      updateDisplay();
+    }
+  }, 1000);
+}
+
+function pauseTimer() {
+  clearInterval(timer);
+  isRunning = false;
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  isRunning = false;
+  isStudy = true;
+  timeLeft = document.getElementById("studyInput").value * 60;
+  modeDisplay.textContent = "Study time ✨";
+  updateDisplay();
+}
+
+updateDisplay();
