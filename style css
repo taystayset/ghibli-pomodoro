@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f1efe7; /* fond neutre, Notion-friendly */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.card {
+  background: #f7f4ec;
+  border-radius: 36px;
+  padding: 36px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: normal;
+  color: #4b5d4b;
+}
+
+.timer {
+  font-size: 64px;
+  color: #3e4f3e;
+  margin: 20px 0;
+}
+
+.quote {
+  font-style: italic;
+  color: #6b7f6b;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  background: #7fa58a;
+  color: white;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #6b9276;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.settings label {
+  font-size: 14px;
+  color: #4b5d4b;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings input {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+.mode {
+  margin-top: 14px;
+  font-style: italic;
+  color: #4b5d4b;
+}
