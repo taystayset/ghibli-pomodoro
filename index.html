@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Corner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>🌿 Study Corner</h1>
+
+    <div class="timer" id="timer">25:00</div>
+
+    <p class="quote">
+      Take it slow. You’re doing fine 🍃
+    </p>
+
+    <div class="controls">
+      <button onclick="startTimer()">Start</button>
+      <button onclick="pauseTimer()">Pause</button>
+      <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <div class="settings">
+      <label>
+        Study
+        <input type="number" id="studyInput" value="25">
+      </label>
+      <label>
+        Break
+        <input type="number" id="breakInput" value="5">
+      </label>
+    </div>
+
+    <p class="mode" id="mode">Study time ✨</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
